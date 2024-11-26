@@ -1,0 +1,3822 @@
+(* Content-type: application/vnd.wolfram.cdf.text *)
+
+(*** Wolfram CDF File ***)
+(* http://www.wolfram.com/cdf *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*************************************************************************)
+(*                                                                       *)
+(*                                                                       *)
+(*  This file was created under the Wolfram Enterprise licensing terms.  *)
+(*                                                                       *)
+(*       For additional information concerning CDF licensing see:        *)
+(*                                                                       *)
+(*        www.wolfram.com/cdf/adopting-cdf/licensing-options.html        *)
+(*                                                                       *)
+(*                                                                       *)
+(*                                                                       *)
+(*************************************************************************)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[      1060,         20]
+NotebookDataLength[    153166,       3801]
+NotebookOptionsPosition[    151706,       3766]
+NotebookOutlinePosition[    152111,       3782]
+CellTagsIndexPosition[    152068,       3779]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"SetDirectory", "@", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"$FrontEnd", "===", "Null"}], ",", 
+    RowBox[{"DirectoryName", "[", "$InputFileName", "]"}], ",", 
+    RowBox[{"NotebookDirectory", "[", "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.941603706221945*^9, 3.941603753350115*^9}, {
+  3.941608833036873*^9, 3.9416088424030914`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"2117aabe-37fc-da4e-853a-8463ce42525f"],
+
+Cell[BoxData[
+ FormBox["\<\"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\fytc\\\\workspace\\\\\
+FAD-sym\"\>", TraditionalForm]], "Output",
+ CellChangeTimes->{3.9416037587464714`*^9, 3.9416085594814034`*^9, 
+  3.9416088429499016`*^9, 3.9416091800789146`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"c1b6b21c-4839-7243-863d-fb0a1d9c7e71"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$LoadAddOns", "=", 
+   RowBox[{"{", "\"\<FeynArts\>\"", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "FeynCalc`"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$FAVerbose", "=", "0"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9404919527064896`*^9, 3.9404920160743065`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"0b3db87f-7655-c34d-bcf5-eb12b8fb86af"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{
+    StyleBox["\<\"FeynCalc \"\>", "Text",
+     StripOnInput->False,
+     FontWeight->Bold], "\[InvisibleSpace]", 
+    StyleBox["\<\"10.1.0 (stable version). For help, use the \"\>", "Text",
+     StripOnInput->False], "\[InvisibleSpace]", 
+    StyleBox[
+     TagBox[
+      ButtonBox[
+       RowBox[{
+        RowBox[{"online", " ", "documentation"}], ","}],
+       BaseStyle->"Hyperlink",
+       ButtonData:>{
+         URL["https://feyncalc.github.io/referenceDev"], None},
+       ButtonNote->"https://feyncalc.github.io/referenceDev"],
+      DisplayForm], "Text",
+     StripOnInput->False], "\[InvisibleSpace]", 
+    StyleBox["\<\" visit the \"\>", "Text",
+     StripOnInput->False], "\[InvisibleSpace]", 
+    StyleBox[
+     TagBox[
+      ButtonBox["forum",
+       BaseStyle->"Hyperlink",
+       ButtonData:>{
+         URL["https://github.com/FeynCalc/feyncalc/discussions"], None},
+       ButtonNote->"https://github.com/FeynCalc/feyncalc/discussions/"],
+      DisplayForm], "Text",
+     StripOnInput->False], "\[InvisibleSpace]", 
+    StyleBox["\<\" and have a look at the supplied \"\>", "Text",
+     StripOnInput->False], "\[InvisibleSpace]", 
+    StyleBox[
+     TagBox[
+      ButtonBox[
+       RowBox[{"examples", "."}],
+       BaseStyle->"Hyperlink",
+       ButtonFunction:>SystemOpen[
+         FileNameJoin[{FeynCalc`$FeynCalcDirectory, "Examples"}]],
+       Evaluator->Automatic,
+       Method->"Preemptive"],
+      DisplayForm], "Text",
+     StripOnInput->False], "\[InvisibleSpace]", 
+    StyleBox["\<\" The PDF-version of the manual can be downloaded \"\>", 
+     "Text",
+     StripOnInput->False], "\[InvisibleSpace]", 
+    StyleBox[
+     TagBox[
+      ButtonBox[
+       RowBox[{"here", "."}],
+       BaseStyle->"Hyperlink",
+       ButtonData:>{
+         URL[
+         "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-\
+manual/FeynCalcManual.pdf"], None},
+       ButtonNote->
+        "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-\
+manual/FeynCalcManual.pdf"],
+      DisplayForm], "Text",
+     StripOnInput->False]}],
+   SequenceForm[
+    Style["FeynCalc ", "Text", Bold], 
+    Style["10.1.0 (stable version). For help, use the ", "Text"], 
+    Style[
+     DisplayForm[
+      ButtonBox["online documentation,", ButtonData :> {
+         URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> 
+       "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]],
+      "Text"], 
+    Style[" visit the ", "Text"], 
+    Style[
+     DisplayForm[
+      ButtonBox["forum", ButtonData :> {
+         URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, 
+       BaseStyle -> "Hyperlink", ButtonNote -> 
+       "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"], 
+    Style[" and have a look at the supplied ", "Text"], 
+    Style[
+     DisplayForm[
+      ButtonBox[
+      "examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[
+         FileNameJoin[{FeynCalc`$FeynCalcDirectory, "Examples"}]], Evaluator -> 
+       Automatic, Method -> "Preemptive"]], "Text"], 
+    Style[" The PDF-version of the manual can be downloaded ", "Text"], 
+    Style[
+     DisplayForm[
+      ButtonBox["here.", ButtonData :> {
+         URL[
+         "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-\
+manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> 
+       "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-\
+manual/FeynCalcManual.pdf"]], "Text"]],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.9404920006091194`*^9, 3.9404920305965424`*^9}, 
+   3.940492896993454*^9, 3.9404930264615307`*^9, 3.940499543036278*^9, 
+   3.940500445203964*^9, 3.9405006510800266`*^9, 3.9405007553343735`*^9, 
+   3.9405010219666214`*^9, 3.9405016247566338`*^9, 3.940502512904011*^9, 
+   3.9412730166644135`*^9, 3.9412731042904415`*^9, 3.941573219559288*^9, 
+   3.9415911569412193`*^9, 3.941608565465702*^9, 3.941609183253557*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"af390bac-1da5-1d42-afb7-9ef4595ac6c2"],
+
+Cell[BoxData[
+ FormBox[
+  StyleBox["\<\"If you use FeynCalc in your research, please evaluate \
+FeynCalcHowToCite[] to learn how to cite this software.\"\>", "Text",
+   StripOnInput->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.9404920006091194`*^9, 3.9404920305965424`*^9}, 
+   3.940492896993454*^9, 3.9404930264615307`*^9, 3.940499543036278*^9, 
+   3.940500445203964*^9, 3.9405006510800266`*^9, 3.9405007553343735`*^9, 
+   3.9405010219666214`*^9, 3.9405016247566338`*^9, 3.940502512904011*^9, 
+   3.9412730166644135`*^9, 3.9412731042904415`*^9, 3.941573219559288*^9, 
+   3.9415911569412193`*^9, 3.941608565465702*^9, 3.94160918325926*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"f6204dbc-5831-8543-988f-f9714020a0dd"],
+
+Cell[BoxData[
+ FormBox[
+  StyleBox["\<\"Please keep in mind that the proper academic attribution of \
+our work is crucial to ensure the future development of this package!\"\>", 
+   "Text",
+   StripOnInput->False,
+   FontSlant->Italic], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.9404920006091194`*^9, 3.9404920305965424`*^9}, 
+   3.940492896993454*^9, 3.9404930264615307`*^9, 3.940499543036278*^9, 
+   3.940500445203964*^9, 3.9405006510800266`*^9, 3.9405007553343735`*^9, 
+   3.9405010219666214`*^9, 3.9405016247566338`*^9, 3.940502512904011*^9, 
+   3.9412730166644135`*^9, 3.9412731042904415`*^9, 3.941573219559288*^9, 
+   3.9415911569412193`*^9, 3.941608565465702*^9, 3.9416091832602615`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"3026eadd-03b4-1848-b676-7f40e7eec531"],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{
+    StyleBox["\<\"FeynArts \"\>", "Text",
+     StripOnInput->False,
+     FontWeight->Bold], "\[InvisibleSpace]", 
+    StyleBox["\<\"3.12 (24 May 2024) patched for use with FeynCalc, for \
+documentation see the \"\>", "Text",
+     StripOnInput->False], "\[InvisibleSpace]", 
+    StyleBox[
+     TagBox[
+      ButtonBox["manual",
+       BaseStyle->"Hyperlink",
+       ButtonFunction:>SystemOpen[
+         First[
+          FileNames[{"*.pdf", "*.PDF"}, 
+           FileNameJoin[{FeynCalc`$FeynArtsDirectory, "manual"}]]]],
+       Evaluator->Automatic,
+       Method->"Preemptive"],
+      DisplayForm], "Text",
+     StripOnInput->False], "\[InvisibleSpace]", 
+    StyleBox["\<\" or visit \"\>", "Text",
+     StripOnInput->False], "\[InvisibleSpace]", 
+    StyleBox[
+     TagBox[
+      ButtonBox[
+       RowBox[{"www", ".", "feynarts", ".", "de", "."}],
+       BaseStyle->"Hyperlink",
+       ButtonData:>{
+         URL["http://www.feynarts.de/"], None},
+       ButtonNote->"www.feynarts.de/"],
+      DisplayForm], "Text",
+     StripOnInput->False]}],
+   SequenceForm[
+    Style["FeynArts ", "Text", Bold], 
+    Style[
+    "3.12 (24 May 2024) patched for use with FeynCalc, for documentation see \
+the ", "Text"], 
+    Style[
+     DisplayForm[
+      ButtonBox[
+      "manual", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[
+         First[
+          FileNames[{"*.pdf", "*.PDF"}, 
+           FileNameJoin[{FeynCalc`$FeynArtsDirectory, "manual"}]]]], 
+       Evaluator -> Automatic, Method -> "Preemptive"]], "Text"], 
+    Style[" or visit ", "Text"], 
+    Style[
+     DisplayForm[
+      ButtonBox["www.feynarts.de.", ButtonData :> {
+         URL["http://www.feynarts.de/"], None}, BaseStyle -> "Hyperlink", 
+       ButtonNote -> "www.feynarts.de/"]], "Text"]],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.9404920006091194`*^9, 3.9404920305965424`*^9}, 
+   3.940492896993454*^9, 3.9404930264615307`*^9, 3.940499543036278*^9, 
+   3.940500445203964*^9, 3.9405006510800266`*^9, 3.9405007553343735`*^9, 
+   3.9405010219666214`*^9, 3.9405016247566338`*^9, 3.940502512904011*^9, 
+   3.9412730166644135`*^9, 3.9412731042904415`*^9, 3.941573219559288*^9, 
+   3.9415911569412193`*^9, 3.941608565465702*^9, 3.941609183322708*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"8f455962-d7fc-2242-9c71-db25a9c1b434"],
+
+Cell[BoxData[
+ FormBox[
+  StyleBox["\<\"If you use FeynArts in your research, please cite\"\>", "Text",
+   StripOnInput->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.9404920006091194`*^9, 3.9404920305965424`*^9}, 
+   3.940492896993454*^9, 3.9404930264615307`*^9, 3.940499543036278*^9, 
+   3.940500445203964*^9, 3.9405006510800266`*^9, 3.9405007553343735`*^9, 
+   3.9405010219666214`*^9, 3.9405016247566338`*^9, 3.940502512904011*^9, 
+   3.9412730166644135`*^9, 3.9412731042904415`*^9, 3.941573219559288*^9, 
+   3.9415911569412193`*^9, 3.941608565465702*^9, 3.941609183324707*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"cc1ee683-f955-464f-889f-829b44c0cee9"],
+
+Cell[BoxData[
+ FormBox[
+  StyleBox["\<\" \[Bullet] T. Hahn, Comput. Phys. Commun., 140, 418-431, \
+2001, arXiv:hep-ph/0012260\"\>", "Text",
+   StripOnInput->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.9404920006091194`*^9, 3.9404920305965424`*^9}, 
+   3.940492896993454*^9, 3.9404930264615307`*^9, 3.940499543036278*^9, 
+   3.940500445203964*^9, 3.9405006510800266`*^9, 3.9405007553343735`*^9, 
+   3.9405010219666214`*^9, 3.9405016247566338`*^9, 3.940502512904011*^9, 
+   3.9412730166644135`*^9, 3.9412731042904415`*^9, 3.941573219559288*^9, 
+   3.9415911569412193`*^9, 3.941608565465702*^9, 3.9416091833267136`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"e1a3e8a1-d161-3e48-a2c6-30d4f423fe4c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"topo23", "=", 
+   RowBox[{"CreateTopologies", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"2", "->", "3"}], ",", 
+     RowBox[{"Adjacencies", "->", "3"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Paint", "[", "topo23", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9404920341617737`*^9, 3.940492095778858*^9}, {
+  3.9404921494052067`*^9, 3.940492172958193*^9}, {3.9404922036381435`*^9, 
+  3.9404922289775696`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"be24d1c9-56b8-194b-8206-f9abc46f07a5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  GraphicsBox[{InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{3.637978807091713*^-12, 14.999999999998181`}, {
+          5.500000000005457, 9.999999999996362}}], 
+         LineBox[{{-1.8189894035458565`*^-12, 5.}, {5.5, 
+          10.000000000001819`}}], 
+         LineBox[{{19.999999999996362`, 16.99999999999818}, {
+          15.500000000001819`, 13.500000000001819`}}], 
+         LineBox[{{20., 10.}, {15.499999999998181`, 13.499999999998181`}}], 
+         LineBox[{{20., 2.999999999998181}, {12., 9.999999999998181}}], 
+         LineBox[{{5.499999999997965, 10.}, {11.999999999997595`, 10.}}], 
+         LineBox[{{15.499999999998181`, 13.5}, {12., 10.}}], 
+         {PointSize[0.04], PointBox[{5.5, 10.}], PointBox[{15.5, 13.5}], 
+          PointBox[{12., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T1",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbf\\\\cgdgeh\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbf\\cgdgeh\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{1.8189894035458565`*^-12, 14.999999999994543`}, {
+          4.500000000001819, 9.999999999992724}}], 
+         LineBox[{{1.8189894035458565`*^-12, 5.}, {4.500000000001819, 10.}}], 
+         LineBox[{{20.000000000005457`, 17.}, {13.000000000010914`, 
+          14.500000000003638`}}], 
+         LineBox[{{19.99999999999727, 9.999999999996362}, {
+          10.850000000003547`, 8.399999999997817}}], 
+         LineBox[{{20., 3.}, {13., 14.500000000001819`}}], 
+         LineBox[{{4.5000000000009095`, 10.000000000003638`}, {
+          10.850000000000364`, 8.400000000005093}}], 
+         LineBox[{{13., 14.49999999999909}, {10.850000000002183`, 
+          8.400000000000546}}], 
+         {PointSize[0.04], PointBox[{4.5, 10.}], PointBox[{13., 14.5}], 
+          PointBox[{10.85, 8.4}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T2",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbf\\\\cgdheg\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbf\\cgdheg\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {22, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{3.637978807091713*^-12, 14.999999999998181`}, {
+          5.500000000005457, 9.999999999996362}}], 
+         LineBox[{{-1.8189894035458565`*^-12, 5.}, {5.5, 
+          10.000000000001819`}}], LineBox[{{20., 17.}, {11.5, 10.}}], 
+         LineBox[{{19.999999999996362`, 9.999999999998181}, {
+          15.500000000001819`, 6.500000000001819}}], 
+         LineBox[{{20., 3.}, {15.499999999998181`, 6.499999999998181}}], 
+         LineBox[{{5.49999999999933, 10.}, {11.500000000000671`, 10.}}], 
+         LineBox[{{11.499999999994543`, 10.000000000001819`}, {
+          15.499999999994543`, 6.500000000001819}}], 
+         {PointSize[0.04], PointBox[{5.5, 10.}], PointBox[{11.5, 10.}], 
+          PointBox[{15.5, 6.5}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T3",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbf\\\\cgdheh\\\\fggh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbf\\cgdheh\\fggh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {44, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 14.5}}],
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+          5.5}}], LineBox[{{20.000000000004547`, 17.}, {10.000000000012733`, 
+          14.5}}], 
+         LineBox[{{20.000000000003638`, 10.}, {10.000000000010914`, 
+          5.500000000003638}}], 
+         LineBox[{{20., 3.}, {10.000000000001819`, 10.}}], 
+         LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}], 
+         LineBox[{{10., 5.5}, {10., 10.}}], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T4",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cfdgeh\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cfdgeh\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {0, 22}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 14.5}}],
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+          5.5}}], LineBox[{{20.000000000004547`, 17.}, {10.000000000012733`, 
+          14.5}}], 
+         LineBox[{{20.00000000000112, 10.000000000003638`}, {
+          10.000000000003325`, 10.000000000003638`}}], 
+         LineBox[{{20., 3.}, {10., 5.499999999996362}}], 
+         LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}], 
+         LineBox[{{10., 5.5}, {10., 10.}}], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T5",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cfdheg\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cfdheg\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {22, 22}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 14.5}}],
+          LineBox[{{1.3642420526593924`*^-12, 5.}, {10.000000000002728`, 
+          7.}}], LineBox[{{20.000000000004547`, 17.}, {10.000000000012733`, 
+          14.5}}], 
+         LineBox[{{19.999999999996362`, 9.999999999998181}, {
+          15.500000000001819`, 6.500000000001819}}], 
+         LineBox[{{20., 3.}, {15.499999999998181`, 6.499999999998181}}], 
+         LineBox[{{10., 14.50000000000102}, {10., 6.99999999999898}}], 
+         LineBox[{{10.00000000000091, 7.000000000003638}, {
+          15.499999999998863`, 6.5}}], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 7.}], 
+          PointBox[{15.5, 6.5}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T6",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cfdheh\\\\fggh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cfdheh\\fggh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {44, 22}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 14.5}}],
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+          5.5}}], LineBox[{{20.00000000000182, 17.00000000000182}, {
+          9.999999999998181, 5.499999999998181}}], 
+         LineBox[{{20., 9.999999999996362}, {10., 14.5}}], 
+         LineBox[{{20., 3.}, {10.000000000001819`, 10.}}], 
+         LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}], 
+         LineBox[{{10., 5.5}, {10., 10.}}], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T7",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cgdfeh\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cgdfeh\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {0, 0}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{3.637978807091713*^-12, 14.999999999998181`}, {10., 
+          5.500000000001819}}], 
+         LineBox[{{0., 5.}, {9.999999999998181, 14.500000000001819`}}], 
+         LineBox[{{20.000000000004547`, 17.}, {10.000000000012733`, 14.5}}], 
+         LineBox[{{20.00000000000112, 10.000000000003638`}, {
+          10.000000000003325`, 10.000000000003638`}}], 
+         LineBox[{{20., 3.}, {10., 5.499999999996362}}], 
+         LineBox[{{10., 5.5}, {10., 10.}}], 
+         LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}], 
+         {PointSize[0.04], PointBox[{10., 5.5}], PointBox[{10., 14.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T8",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cgdhef\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cgdhef\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {22, 0}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{-3.637978807091713*^-12, 15.000000000001819`}, {
+          9.999999999994543, 7.000000000001819}}], 
+         LineBox[{{0., 5.}, {9.999999999998181, 14.500000000001819`}}], 
+         LineBox[{{20.000000000004547`, 17.}, {10.000000000012733`, 14.5}}], 
+         LineBox[{{19.999999999996362`, 9.999999999998181}, {
+          15.500000000001819`, 6.500000000001819}}], 
+         LineBox[{{20., 3.}, {15.499999999998181`, 6.499999999998181}}], 
+         LineBox[{{10., 7.}, {10., 14.5}}], 
+         LineBox[{{10.00000000000091, 7.000000000003638}, {
+          15.499999999998863`, 6.5}}], 
+         {PointSize[0.04], PointBox[{10., 7.}], PointBox[{10., 14.5}], 
+          PointBox[{15.5, 6.5}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T9",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cgdheh\\\\fgfh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cgdheh\\fgfh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {44, 0}, {0, 0}, {22, 22}], InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["2",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {28.5, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[RightArrow]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {33., 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["3",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {37.5, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]]},
+   AspectRatio->1.0999999999999999`,
+   ImageSize->{288, 288},
+   PlotRange->{{0, 66}, {0, 72.6}}], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.940492226087332*^9, 3.9404922296728134`*^9}, 
+   3.940492897725775*^9, 3.9404930292378616`*^9, 3.940499543762354*^9, 
+   3.9405004461096478`*^9, 3.9405006512076283`*^9, 3.940500756244753*^9, 
+   3.94050102297546*^9, 3.940501625723612*^9, 3.940502513462652*^9, 
+   3.941273017067049*^9, 3.9412731046763973`*^9, 3.9415732200485497`*^9, 
+   3.9415911573415775`*^9, 3.941608565846014*^9, 3.941609183577154*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"5a239aa3-8420-7e4c-8d3f-637d70c398a6"],
+
+Cell[BoxData[
+ FormBox[
+  GraphicsBox[{InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 14.5}}],
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+          5.5}}], LineBox[{{19.999999999992724`, 16.999999999996362`}, {
+          9.999999999987267, 9.999999999994543}}], 
+         LineBox[{{20., 9.999999999996362}, {10., 14.5}}], 
+         LineBox[{{20., 3.}, {10., 5.499999999996362}}], 
+         LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}], 
+         LineBox[{{10., 5.5}, {10., 10.}}], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T10",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdfeg\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdfeg\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 14.5}}],
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+          5.5}}], LineBox[{{20.000000000003638`, 17.00000000000182}, {
+          15.500000000003638`, 8.000000000001819}}], 
+         LineBox[{{20., 9.999999999996362}, {10., 14.5}}], 
+         LineBox[{{20., 3.000000000001819}, {15.499999999998181`, 
+          8.000000000003638}}], 
+         LineBox[{{10., 14.499999999999272`}, {10., 5.500000000000729}}], 
+         LineBox[{{10.000000000003638`, 5.5}, {15.500000000003638`, 8.}}], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{15.5, 8.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T11",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdfeh\\\\fggh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdfeh\\fggh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {22, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 14.5}}],
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+          5.5}}], LineBox[{{19.999999999992724`, 16.999999999996362`}, {
+          9.999999999987267, 9.999999999994543}}], 
+         LineBox[{{20.000000000003638`, 10.}, {10.000000000010914`, 
+          5.500000000003638}}], 
+         LineBox[{{19.99999999999818, 3.}, {9.999999999998181, 
+          14.500000000001819`}}], 
+         LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}], 
+         LineBox[{{10., 5.5}, {10., 10.}}], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T12",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdgef\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdgef\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {44, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 14.5}}],
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+          5.5}}], LineBox[{{19.999999999992724`, 16.999999999996362`}, {
+          15.499999999990905`, 13.999999999996362`}}], 
+         LineBox[{{20.000000000003638`, 10.}, {10.000000000010914`, 
+          5.500000000003638}}], 
+         LineBox[{{20., 3.0000000000009095`}, {15.5, 14.00000000000091}}], 
+         LineBox[{{10., 14.499999999999272`}, {10., 5.500000000000729}}], 
+         LineBox[{{10.00000000000091, 14.500000000003638`}, {
+          15.499999999998863`, 14.}}], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{15.5, 14.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T13",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdgeh\\\\fgfh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdgeh\\fgfh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {0, 22}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{3.637978807091713*^-12, 14.999999999998181`}, {10., 
+          5.500000000001819}}], 
+         LineBox[{{0., 4.999999999998181}, {10.000000000001819`, 13.}}], 
+         LineBox[{{20.000000000003638`, 17.000000000003638`}, {
+          16.000000000003638`, 13.500000000001819`}}], 
+         LineBox[{{20., 10.}, {16.00000000000182, 13.499999999998181`}}], 
+         LineBox[{{20., 3.}, {10., 5.499999999996362}}], 
+         LineBox[{{10., 5.5}, {10., 13.}}], 
+         LineBox[{{9.999999999998408, 12.999999999996362`}, {
+          15.999999999997272`, 13.499999999996362`}}], 
+         {PointSize[0.04], PointBox[{10., 5.5}], PointBox[{10., 13.}], 
+          PointBox[{16., 13.5}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T14",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdhef\\\\fggh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdhef\\fggh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {22, 22}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         LineBox[{{1.8189894035458565`*^-12, 15.}, {10.000000000002728`, 
+          13.}}], LineBox[{{-1.0231815394945443`*^-12, 5.}, {
+          10.000000000000796`, 5.5}}], 
+         LineBox[{{19.999999999996362`, 16.99999999999818}, {
+          15.500000000001819`, 13.500000000001819`}}], 
+         LineBox[{{20., 10.}, {15.499999999998181`, 13.499999999998181`}}], 
+         LineBox[{{20., 3.}, {10., 5.499999999996362}}], 
+         LineBox[{{10., 13.00000000000102}, {10., 5.49999999999898}}], 
+         LineBox[{{10.000000000001137`, 13.000000000003638`}, {
+          15.49999999999909, 13.500000000003638`}}], 
+         {PointSize[0.04], PointBox[{10., 13.}], PointBox[{10., 5.5}], 
+          PointBox[{15.5, 13.5}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["T15",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdheg\\\\fgfh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdheg\\fgfh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {44, 22}, {0, 0}, {22, 22}], InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["2",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {28.5, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[RightArrow]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {33., 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["3",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {37.5, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]]},
+   AspectRatio->1.0999999999999999`,
+   ImageSize->{288, 288},
+   PlotRange->{{0, 66}, {0, 72.6}}], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.940492226087332*^9, 3.9404922296728134`*^9}, 
+   3.940492897725775*^9, 3.9404930292378616`*^9, 3.940499543762354*^9, 
+   3.9405004461096478`*^9, 3.9405006512076283`*^9, 3.940500756244753*^9, 
+   3.94050102297546*^9, 3.940501625723612*^9, 3.940502513462652*^9, 
+   3.941273017067049*^9, 3.9412731046763973`*^9, 3.9415732200485497`*^9, 
+   3.9415911573415775`*^9, 3.941608565846014*^9, 3.941609183588331*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"eaf70fc7-065f-ef4e-8542-abf5c508bf8a"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"diag23", "=", 
+   RowBox[{"InsertFields", "[", 
+    RowBox[{"topo23", ",", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"S", "[", "1", "]"}], ",", 
+        RowBox[{"S", "[", "1", "]"}]}], "}"}], "->", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"S", "[", "1", "]"}], ",", 
+        RowBox[{"S", "[", "1", "]"}], ",", 
+        RowBox[{"S", "[", "1", "]"}]}], "}"}]}], ",", 
+     RowBox[{"InsertionLevel", "->", 
+      RowBox[{"{", "Particles", "}"}]}], ",", 
+     RowBox[{"Model", " ", "->", " ", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Phi3\>\"", ",", "\"\<Phi3\>\""}], "}"}], "]"}]}], ",", 
+     RowBox[{"GenericModel", "->", " ", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Phi3\>\"", ",", "\"\<Phi3\>\""}], "}"}], "]"}]}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Paint", "[", "diag23", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.940492109584587*^9, 3.940492122300274*^9}, 
+   3.9404923124126663`*^9, {3.9404928442930603`*^9, 3.9404928789720592`*^9}, {
+   3.9404929397104816`*^9, 3.9404929412195053`*^9}, {3.940492973786125*^9, 
+   3.940493007591511*^9}, {3.9404930388569756`*^9, 3.940493056642166*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"eeb83576-c267-cb4d-b9ef-a030fb24ec0b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  GraphicsBox[{InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{3.637978807091713*^-12, 14.999999999998181`}, {
+           5.500000000005457, 9.999999999996362}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {2.480325367804794, 12.142877904585273}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-1.8189894035458565`*^-12, 5.}, {5.5, 
+           10.000000000001819`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {3.019674632195206, 7.142877904585273}, 
+          ImageScaled[{0, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{19.999999999996362`, 16.99999999999818}, {
+           15.500000000001819`, 13.500000000001819`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.556677202430603, 15.671357882589223}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 10.}, {15.499999999998181`, 13.499999999998181`}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.943322797569394, 12.171357882589223}, 
+          ImageScaled[{0, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 2.999999999998181}, {12., 9.999999999998181}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {15.748744009770927, 6.126450296881059}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{5.499999999997965, 10.}, {11.999999999997595`, 10.}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {8.75, 9.3048}, NCache[
+          ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{15.499999999998181`, 13.5}, {12., 10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {13.435561184457487, 12.064438815542513}, 
+          ImageScaled[{1, 0}]], 
+         {PointSize[0.04], PointBox[{5.5, 10.}], PointBox[{15.5, 13.5}], 
+          PointBox[{12., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T1", " ", "P1", " ", "N1"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbf\\\\cgdgeh\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbf\\cgdgeh\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{1.8189894035458565`*^-12, 14.999999999994543`}, {
+           4.500000000001819, 9.999999999992724}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {1.8885176098786842, 12.235145848890816}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{1.8189894035458565`*^-12, 5.}, {4.500000000001819, 
+           10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {2.611482390121316, 7.235145848890816}, 
+          ImageScaled[{0, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000005457`, 17.}, {13.000000000010914`, 
+           14.500000000003638`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {16.062762683902395, 16.369464485073287}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{19.99999999999727, 9.999999999996362}, {
+           10.850000000003547`, 8.399999999997817}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {18.499678375810724, 10.395567152922407}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {13., 14.500000000001819`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {18.105237768820935, 5.054643110918325}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{4.5000000000009095`, 10.000000000003638`}, {
+           10.850000000000364`, 8.400000000005093}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {7.3573687038464906, 8.544200793390761}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{13., 14.49999999999909}, {10.850000000002183`, 
+           8.400000000000546}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {11.303727144698613, 11.882140432606228}, 
+          NCache[ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {PointSize[0.04], PointBox[{4.5, 10.}], PointBox[{13., 14.5}], 
+          PointBox[{10.85, 8.4}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T2", " ", "P1", " ", "N2"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbf\\\\cgdheg\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbf\\cgdheg\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {22, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{3.637978807091713*^-12, 14.999999999998181`}, {
+           5.500000000005457, 9.999999999996362}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {2.480325367804794, 12.142877904585273}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-1.8189894035458565`*^-12, 5.}, {5.5, 
+           10.000000000001819`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {3.019674632195206, 7.142877904585273}, 
+          ImageScaled[{0, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 17.}, {11.5, 10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {15.528380571280572, 13.898709306302166}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{19.999999999996362`, 9.999999999998181}, {
+           15.500000000001819`, 6.500000000001819}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.556677202430603, 8.671357882589223}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {15.499999999998181`, 6.499999999998181}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.943322797569394, 5.171357882589224}, 
+          ImageScaled[{0, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{5.49999999999933, 10.}, {11.500000000000671`, 10.}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {8.5, 10.6952}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{11.499999999994543`, 10.000000000001819`}, {
+           15.499999999994543`, 6.500000000001819}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {13.248744009770927, 7.876450296881059}, 
+          ImageScaled[{1, 1}]], 
+         {PointSize[0.04], PointBox[{5.5, 10.}], PointBox[{11.5, 10.}], 
+          PointBox[{15.5, 6.5}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T3", " ", "P1", " ", "N3"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbf\\\\cgdheh\\\\fggh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbf\\cgdheh\\fggh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {44, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 
+           14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 15.443578040541198}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+           5.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 4.5564219594588025}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000004547`, 17.}, {10.000000000012733`, 14.5}}]},
+          InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {14.684703687452767, 16.40638525018893}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000003638`, 10.}, {10.000000000010914`, 
+           5.500000000003638}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.518632839631646, 9.227224942681396}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {10.000000000001819`, 10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.604641095328308, 4.104154803807008}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 12.25}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 5.5}, {10., 10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 7.75}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T4", " ", "P1", " ", "N4"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cfdgeh\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cfdgeh\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {0, 22}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 
+           14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 15.443578040541198}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+           5.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 4.5564219594588025}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000004547`, 17.}, {10.000000000012733`, 14.5}}]},
+          InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {14.684703687452767, 16.40638525018893}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.00000000000112, 10.000000000003638`}, {
+           10.000000000003325`, 10.000000000003638`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {15., 10.6952}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {10., 5.499999999996362}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {15.315296312547233, 4.906385250188932}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 12.25}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 5.5}, {10., 10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 7.75}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T5", " ", "P1", " ", "N5"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cfdheg\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cfdheg\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {22, 22}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 
+           14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 15.443578040541198}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{1.3642420526593924`*^-12, 5.}, {10.000000000002728`, 
+           7.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.254950975679639, 5.330045121601803}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000004547`, 17.}, {10.000000000012733`, 14.5}}]},
+          InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {14.684703687452767, 16.40638525018893}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{19.999999999996362`, 9.999999999998181}, {
+           15.500000000001819`, 6.500000000001819}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.556677202430603, 8.671357882589223}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {15.499999999998181`, 6.499999999998181}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.556677202430606, 4.328642117410776}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 14.50000000000102}, {10., 6.99999999999898}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 10.75}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10.00000000000091, 7.000000000003638}, {
+           15.499999999998863`, 6.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {12.632303530144727, 6.060138831591985}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 7.}], 
+          PointBox[{15.5, 6.5}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T6", " ", "P1", " ", "N6"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cfdheh\\\\fggh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cfdheh\\fggh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {44, 22}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 
+           14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 15.443578040541198}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+           5.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 4.5564219594588025}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.00000000000182, 17.00000000000182}, {9.999999999998181,
+            5.499999999998181}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.60600102199336, 14.894553300159064}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 9.999999999996362}, {10., 14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {18.055652763829062, 10.356136211085722}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {10.000000000001819`, 10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {14.859298952327674, 6.0397985033252475}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 12.25}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 5.5}, {10., 10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 7.75}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T7", " ", "P1", " ", "N7"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cgdfeh\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cgdfeh\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {0, 0}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{3.637978807091713*^-12, 14.999999999998181`}, {10., 
+           5.500000000001819}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {2.8946212709358585, 12.89443136724368}, 
+          ImageScaled[{0, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{0., 5.}, {9.999999999998181, 14.500000000001819`}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {2.806293528255801, 6.894129512356109}, 
+          ImageScaled[{0, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000004547`, 17.}, {10.000000000012733`, 14.5}}]},
+          InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {14.684703687452767, 16.40638525018893}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.00000000000112, 10.000000000003638`}, {
+           10.000000000003325`, 10.000000000003638`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {15.949823510097126, 10.695175115018273}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {10., 5.499999999996362}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {14.684703687452767, 3.5936147498110684}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 5.5}, {10., 10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {10.6952, 7.75}, NCache[
+          ImageScaled[{0, Rational[1, 2]}], ImageScaled[{0, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {10.6952, 12.25}, NCache[
+          ImageScaled[{0, Rational[1, 2]}], ImageScaled[{0, 0.5}]]], 
+         {PointSize[0.04], PointBox[{10., 5.5}], PointBox[{10., 14.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T8", " ", "P1", " ", "N8"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cgdhef\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cgdhef\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {22, 0}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-3.637978807091713*^-12, 15.000000000001819`}, {
+           9.999999999994543, 7.000000000001819}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {2.543783756353175, 13.594055090928734}, 
+          ImageScaled[{0, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{0., 5.}, {9.999999999998181, 14.500000000001819`}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {2.7464097832400194, 6.854706883936289}, 
+          ImageScaled[{0, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000004547`, 17.}, {10.000000000012733`, 14.5}}]},
+          InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {14.684703687452767, 16.40638525018893}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{19.999999999996362`, 9.999999999998181}, {
+           15.500000000001819`, 6.500000000001819}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.556677202430603, 8.671357882589223}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {15.499999999998181`, 6.499999999998181}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.556677202430606, 4.328642117410776}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 7.}, {10., 14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {10.6952, 10.75}, NCache[
+          ImageScaled[{0, Rational[1, 2]}], ImageScaled[{0, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10.00000000000091, 7.000000000003638}, {
+           15.499999999998863`, 6.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {12.632303530144727, 6.060138831591985}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {PointSize[0.04], PointBox[{10., 7.}], PointBox[{10., 14.5}], 
+          PointBox[{15.5, 6.5}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T9", " ", "P1", " ", "N9"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\cgdheh\\\\fgfh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\cgdheh\\fgfh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {44, 0}, {0, 0}, {22, 22}], InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[Phi]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {21.75, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[Phi]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {26.25, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[RightArrow]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {30.75, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[Phi]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {35.25, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[Phi]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {39.75, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[Phi]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {44.25, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]]},
+   AspectRatio->1.0999999999999999`,
+   ImageSize->{288, 288},
+   PlotRange->{{0, 66}, {0, 72.6}}], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.9404930532703094`*^9, 3.940493057388521*^9}, 
+   3.940499543847868*^9, 3.9405004462073994`*^9, 3.940500651297596*^9, 
+   3.9405007563755913`*^9, 3.940501023116894*^9, 3.9405016258541718`*^9, 
+   3.94050251581217*^9, 3.941273017208681*^9, 3.9412731058011246`*^9, 
+   3.9415732201356583`*^9, 3.941591166442644*^9, 3.941608565985035*^9, 
+   3.9416091836786137`*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"4f64a49c-a277-5643-bf21-52c470314a30"],
+
+Cell[BoxData[
+ FormBox[
+  GraphicsBox[{InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 
+           14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 15.443578040541198}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+           5.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 4.5564219594588025}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{19.999999999992724`, 16.999999999996362`}, {
+           9.999999999987267, 9.999999999994543}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.706734382259686, 15.977769196737455}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 9.999999999996362}, {10., 14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.505711341870608, 10.65543984978638}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {10., 5.499999999996362}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {14.684703687452767, 3.5936147498110684}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 12.25}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 5.5}, {10., 10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 7.75}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T10", " ", "P1", " ", "N10"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdfeg\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdfeg\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 
+           14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 15.443578040541198}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+           5.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 4.5564219594588025}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000003638`, 17.00000000000182}, {
+           15.500000000003638`, 8.000000000001819}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {18.40505550753343, 14.844771898422305}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 9.999999999996362}, {10., 14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {12.39658154379417, 13.89589417436342}, 
+          ImageScaled[{0, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.000000000001819}, {15.499999999998181`, 
+           8.000000000003638}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {18.111482390121314, 5.764854151109184}, 
+          ImageScaled[{0, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 14.499999999999272`}, {10., 5.500000000000729}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 10.}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10.000000000003638`, 5.5}, {15.500000000003638`, 8.}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {12.68314382759154, 6.171323579298614}, 
+          ImageScaled[{0, 1}]], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{15.5, 8.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T11", " ", "P1", " ", "N11"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdfeh\\\\fggh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdfeh\\fggh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {22, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 
+           14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 15.443578040541198}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+           5.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 4.5564219594588025}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{19.999999999992724`, 16.999999999996362`}, {
+           9.999999999987267, 9.999999999994543}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {16.10586996887496, 14.895393212240169}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000003638`, 10.}, {10.000000000010914`, 
+           5.500000000003638}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.99776779382514, 9.748467396506868}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{19.99999999999818, 3.}, {9.999999999998181, 
+           14.500000000001819`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.10587127249699, 5.105113654528812}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 14.500000000000417`}, {10., 9.999999999999584}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 12.25}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 5.5}, {10., 10.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 7.75}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{10., 10.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T12", " ", "P1", " ", "N12"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdgef\\\\fhgh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdgef\\fhgh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {44, 44}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-7.958078640513122*^-13, 15.}, {10.00000000000091, 
+           14.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 15.443578040541198}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+           5.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 4.5564219594588025}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{19.999999999992724`, 16.999999999996362`}, {
+           15.499999999990905`, 13.999999999996362`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.633689744907205, 15.976865382639197}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000003638`, 10.}, {10.000000000010914`, 
+           5.500000000003638}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {14.064060552203458, 8.081645916219195}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.0000000000009095`}, {15.5, 14.00000000000091}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {18.603597040126015, 4.499729505042874}, 
+          NCache[ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 14.499999999999272`}, {10., 5.500000000000729}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 10.}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10.00000000000091, 14.500000000003638`}, {
+           15.499999999998863`, 14.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {12.867696469855273, 14.939861168408015}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {PointSize[0.04], PointBox[{10., 14.5}], PointBox[{10., 5.5}], 
+          PointBox[{15.5, 14.}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T13", " ", "P1", " ", "N13"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdgeh\\\\fgfh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdgeh\\fgfh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {0, 22}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{3.637978807091713*^-12, 14.999999999998181`}, {10., 
+           5.500000000001819}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {2.8946212709358585, 12.89443136724368}, 
+          ImageScaled[{0, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{0., 4.999999999998181}, {10.000000000001819`, 13.}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {2.8964113321260743, 6.604308618733808}, 
+          ImageScaled[{0, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20.000000000003638`, 17.000000000003638`}, {
+           16.000000000003638`, 13.500000000001819`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.748744009770927, 15.62354970311894}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 10.}, {16.00000000000182, 13.499999999998181`}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.748744009770927, 11.37645029688106}, 
+          ImageScaled[{1, 1}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {10., 5.499999999996362}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {14.684703687452767, 3.5936147498110684}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 5.5}, {10., 13.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {10.6952, 9.25}, NCache[
+          ImageScaled[{0, Rational[1, 2]}], ImageScaled[{0, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{9.999999999998408, 12.999999999996362`}, {
+           15.999999999997272`, 13.499999999996362`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {12.892040876190137, 13.940709485718344}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {PointSize[0.04], PointBox[{10., 5.5}], PointBox[{10., 13.}], 
+          PointBox[{16., 13.5}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T14", " ", "P1", " ", "N14"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdhef\\\\fggh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdhef\\fggh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {22, 22}, {0, 0}, {22, 22}], InsetBox[
+     GraphicsBox[
+      TagBox[
+       TooltipBox[
+        {Thickness[0.005], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{1.8189894035458565`*^-12, 15.}, {10.000000000002728`, 
+           13.}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.254950975679639, 14.669954878398197}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{-1.0231815394945443`*^-12, 5.}, {10.000000000000796`, 
+           5.5}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {5.06491890202706, 4.5564219594588025}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{19.999999999996362`, 16.99999999999818}, {
+           15.500000000001819`, 13.500000000001819`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.556677202430603, 15.671357882589223}, 
+          ImageScaled[{1, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 10.}, {15.499999999998181`, 13.499999999998181`}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {17.943322797569394, 12.171357882589223}, 
+          ImageScaled[{0, 0}]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{20., 3.}, {10., 5.499999999996362}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {15.315296312547233, 4.906385250188932}, 
+          NCache[ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10., 13.00000000000102}, {10., 5.49999999999898}}]}, 
+         InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {9.3048, 9.25}, NCache[
+          ImageScaled[{1, Rational[1, 2]}], ImageScaled[{1, 0.5}]]], 
+         {Dashing[{0.030000000000000002`, 0.030000000000000002`}], 
+          LineBox[{{10.000000000001137`, 13.000000000003638`}, {
+           15.49999999999909, 13.500000000003638`}}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox["\[Phi]",
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->9.996694214876035],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            9.996694214876035]& ], {12.867696469855273, 12.560138831591985}, 
+          NCache[ImageScaled[{Rational[1, 2], 1}], ImageScaled[{0.5, 1}]]], 
+         {PointSize[0.04], PointBox[{10., 13.}], PointBox[{10., 5.5}], 
+          PointBox[{15.5, 13.5}]}, InsetBox[
+          TagBox[
+           StyleBox[
+            TagBox[
+             RowBox[{"T15", " ", "P1", " ", "N15"}],
+             DisplayForm],
+            FontFamily->"Helvetica",
+            FontSize->7.997355371900828],
+           
+           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+            7.997355371900828]& ], {10., -0.5}, NCache[
+          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+        "\"afbg\\\\chdheg\\\\fgfh.m\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "afbg\\chdheg\\fgfh.m", "Tooltip"]& ],
+      AspectRatio->1,
+      PlotRange->{{-1, 21}, {-1, 21}}], {44, 22}, {0, 0}, {22, 22}], InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[Phi]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {21.75, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[Phi]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {26.25, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[RightArrow]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {30.75, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[Phi]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {35.25, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[Phi]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {39.75, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]],
+     InsetBox[
+     TagBox[
+      StyleBox[
+       TagBox["\[Phi]",
+        DisplayForm],
+       FontFamily->"Helvetica",
+       FontSize->11.99603305785124],
+      StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+       11.99603305785124]& ], {44.25, 69.96}, NCache[
+     ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]]},
+   AspectRatio->1.0999999999999999`,
+   ImageSize->{288, 288},
+   PlotRange->{{0, 66}, {0, 72.6}}], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.9404930532703094`*^9, 3.940493057388521*^9}, 
+   3.940499543847868*^9, 3.9405004462073994`*^9, 3.940500651297596*^9, 
+   3.9405007563755913`*^9, 3.940501023116894*^9, 3.9405016258541718`*^9, 
+   3.94050251581217*^9, 3.941273017208681*^9, 3.9412731058011246`*^9, 
+   3.9415732201356583`*^9, 3.941591166442644*^9, 3.941608565985035*^9, 
+   3.9416091836967354`*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"3c7846c4-94af-c64c-a07c-c114fcf5fa6e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"iM23", "=", 
+   RowBox[{"FCFAConvert", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"CreateFeynAmp", "[", 
+      RowBox[{"diag23", ",", 
+       RowBox[{"Truncated", "->", "True"}], ",", 
+       RowBox[{"GaugeRules", "->", 
+        RowBox[{"{", "}"}]}], ",", 
+       RowBox[{"PreFactor", "->", "1"}]}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"IncomingMomenta", "->", 
+      RowBox[{"{", 
+       RowBox[{"pa", ",", "pb"}], "}"}]}], ",", 
+     RowBox[{"OutgoingMomenta", "->", 
+      RowBox[{"{", 
+       RowBox[{"k1", ",", "k2", ",", "k3"}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"LorentzIndexNames", "->", 
+      RowBox[{"{", "}"}]}], ",", 
+     RowBox[{"LoopMomenta", "->", 
+      RowBox[{"{", "}"}]}], ",", 
+     RowBox[{"UndoChiralSplittings", "->", "True"}], ",", 
+     RowBox[{"ChangeDimension", "->", "4"}], ",", 
+     RowBox[{"List", "->", "True"}], ",", 
+     RowBox[{"SMP", "->", "True"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FinalSubstitutions", "->", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"GaugeXi", "@", 
+          RowBox[{"S", "[", "1", "]"}]}], "->", "1"}], ",", 
+        RowBox[{"Mphi", "->", "m"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M23Sqr", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"FCE", "[", 
+      RowBox[{
+       RowBox[{"Total", "[", "iM23", "]"}], " ", 
+       RowBox[{"ComplexConjugate", "@", 
+        RowBox[{"Total", "[", "iM23", "]"}]}]}], "]"}], "//.", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"k3", "->", 
+        RowBox[{"pa", "+", "pb", "-", "k1", "-", "k2"}]}], ",", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "k1"}], "-", "k2"}], ",", "m"}], "}"}], ",", 
+          "term___"}], "]"}], "->", 
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"k1", "+", "k2"}], ",", "m"}], "}"}], ",", "term"}], 
+         "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "k1"}], "-", "k2", "+", "pa"}], ",", "m"}], "}"}], 
+          ",", "term___"}], "]"}], "->", 
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"k1", "+", "k2", "-", "pa"}], ",", "m"}], "}"}], ",", 
+          "term"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "k1"}], "-", "k2", "+", "pb"}], ",", "m"}], "}"}], 
+          ",", "term___"}], "]"}], "->", 
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"k1", "+", "k2", "-", "pb"}], ",", "m"}], "}"}], ",", 
+          "term"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "k1"}], "+", "pa"}], ",", "m"}], "}"}], ",", 
+          "term___"}], "]"}], "->", 
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"k1", "-", "pa"}], ",", "m"}], "}"}], ",", "term"}], 
+         "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "k1"}], "+", "pb"}], ",", "m"}], "}"}], ",", 
+          "term___"}], "]"}], "->", 
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"k1", "-", "pb"}], ",", "m"}], "}"}], ",", "term"}], 
+         "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "k1"}], "+", "pa", "+", "pb"}], ",", "m"}], "}"}], 
+          ",", "term___"}], "]"}], "->", 
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"k1", "-", "pa", "-", "pb"}], ",", "m"}], "}"}], ",", 
+          "term"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "k2"}], "+", "pa"}], ",", "m"}], "}"}], ",", 
+          "term___"}], "]"}], "->", 
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"k2", "-", "pa"}], ",", "m"}], "}"}], ",", "term"}], 
+         "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "k2"}], "+", "pb"}], ",", "m"}], "}"}], ",", 
+          "term___"}], "]"}], "->", 
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"k2", "-", "pb"}], ",", "m"}], "}"}], ",", "term"}], 
+         "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "k2"}], "+", "pa", "+", "pb"}], ",", "m"}], "}"}], 
+          ",", "term___"}], "]"}], "->", 
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"k2", "-", "pa", "-", "pb"}], ",", "m"}], "}"}], ",", 
+          "term"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "pa"}], "-", "pb"}], ",", "m"}], "}"}], ",", 
+          "term___"}], "]"}], "->", "y"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"FAD", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"pa", "+", "pb"}], ",", "m"}], "}"}], ",", "term___"}], 
+         "]"}], "->", "y"}]}], "\[IndentingNewLine]", "}"}]}], "//", 
+    "Expand"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ruleFAD", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"FAD", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k1", "+", "k2"}], ",", "_"}], "}"}], ",", "_"}], "]"}], "->", 
+      RowBox[{"x", "[", "4", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"FAD", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k1", "+", "k2", "-", "pa"}], ",", "_"}], "}"}], ",", "_"}],
+        "]"}], "->", 
+      RowBox[{"x", "[", "5", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"FAD", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k1", "+", "k2", "-", "pb"}], ",", "_"}], "}"}], ",", "_"}],
+        "]"}], "->", 
+      RowBox[{"x", "[", "6", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"FAD", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k1", "-", "pa"}], ",", "_"}], "}"}], ",", "_"}], "]"}], "->", 
+      RowBox[{"x", "[", "7", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"FAD", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k1", "-", "pb"}], ",", "_"}], "}"}], ",", "_"}], "]"}], "->", 
+      RowBox[{"x", "[", "8", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"FAD", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k1", "-", "pa", "-", "pb"}], ",", "_"}], "}"}], ",", "_"}],
+        "]"}], "->", 
+      RowBox[{"x", "[", "9", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"FAD", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k2", "-", "pa"}], ",", "_"}], "}"}], ",", "_"}], "]"}], "->", 
+      RowBox[{"x", "[", "10", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"FAD", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k2", "-", "pb"}], ",", "_"}], "}"}], ",", "_"}], "]"}], "->", 
+      RowBox[{"x", "[", "11", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"FAD", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k2", "-", "pa", "-", "pb"}], ",", "_"}], "}"}], ",", "_"}],
+        "]"}], "->", 
+      RowBox[{"x", "[", "12", "]"}]}]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"M23Sqr", "=", 
+  RowBox[{"M23Sqr", "/.", "ruleFAD"}]}]}], "Input",
+ CellChangeTimes->{
+  3.941591252676384*^9, {3.9415912894784756`*^9, 3.941591292849354*^9}, {
+   3.9415914004403534`*^9, 3.9415914224444695`*^9}, {3.941591473619295*^9, 
+   3.941591496688305*^9}, {3.9415916242372665`*^9, 3.941591689025877*^9}, {
+   3.9415917455463295`*^9, 3.9415917514344273`*^9}, {3.941591790655733*^9, 
+   3.941591803270857*^9}, {3.9415922566389465`*^9, 3.941592281518097*^9}, {
+   3.9415925419459496`*^9, 3.941592545517292*^9}, {3.941595610273567*^9, 
+   3.9415956224226894`*^9}, {3.941595728270767*^9, 3.9415957520180874`*^9}, {
+   3.941595782214855*^9, 3.9415958435410423`*^9}, {3.9415958845253563`*^9, 
+   3.9415962489114704`*^9}, {3.941596298954052*^9, 3.9415963179070396`*^9}, {
+   3.9415963989534473`*^9, 3.9415964111277084`*^9}, {3.9416001158944874`*^9, 
+   3.941600116201687*^9}, {3.9416001887033386`*^9, 3.941600270209427*^9}, {
+   3.941600322273731*^9, 3.9416006331065083`*^9}, {3.9416007028344955`*^9, 
+   3.9416007129359303`*^9}, {3.941600774409378*^9, 3.9416007774588776`*^9}, {
+   3.941608604071678*^9, 3.941608616668049*^9}, {3.9416086583498363`*^9, 
+   3.9416087311455364`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"10fb1e97-fb65-4f4e-b42a-892df136fd58"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["y", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "4", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "4", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "5", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "4", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "6", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "5", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "7", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "6", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "8", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox["y", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "9", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "7", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "9", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "8", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "9", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "9", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "9", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "9", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "5", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "10", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "8", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "10", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "10", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "6", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "11", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "7", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "11", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "11", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox["y", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "12", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "10", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "12", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"x", "(", "11", ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "12", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "12", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "12", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "12", ")"}], "2"], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "4", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "4", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "4", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "5", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "6", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "7", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "8", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["y", "2"], " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "5", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "8", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "5", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "8", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "6", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "7", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "6", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "7", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "10", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "10", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "11", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"x", "(", "11", ")"}], "2"], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["y", "2"], " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["y", "2"], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "4", ")"}], " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", "y", " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "9", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "5", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "6", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "7", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"x", "(", "8", ")"}], " ", 
+    RowBox[{"x", "(", "10", ")"}], " ", 
+    RowBox[{"x", "(", "11", ")"}], " ", 
+    RowBox[{"x", "(", "12", ")"}], " ", 
+    SuperscriptBox["g", "6"]}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.9416087044777737`*^9, 3.9416087340472527`*^9}, 
+   3.9416091837773247`*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"8f9207a5-2d39-a44b-8017-b73f8d584b0c"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"M23SqrList", "=", 
+   RowBox[{"List", "@@", "M23Sqr"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"exponentMat", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Exponent", "[", 
+      RowBox[{"term", ",", 
+       RowBox[{"x", "[", "ii", "]"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"term", ",", "M23SqrList"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ii", ",", "4", ",", "12"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"coeffcientList", "=", 
+   RowBox[{"M23SqrList", "/", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Apply", "[", 
+       RowBox[{"Times", ",", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"x", "[", "ii", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"ii", ",", "4", ",", "12"}], "}"}]}], "]"}], "^", 
+         "exponentList"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"exponentList", ",", "exponentMat"}], "}"}]}], "]"}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.941608744061472*^9, 3.941608808451723*^9}, {
+  3.941608870526245*^9, 3.941608884734207*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"e2036008-0f56-6f47-862d-f602a4975eee"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"denMomList", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"rule", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "1", ",", "1"}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"rule", ",", "ruleFAD"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<denMom.dat\>\"", ",", "denMomList"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<exponentMat.dat\>\"", ",", "exponentMat"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<coeffcientList.dat\>\"", ",", "coeffcientList"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.941608891458809*^9, 3.9416089125683804`*^9}, {
+  3.9416089652038784`*^9, 3.941609169752489*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"3617fa56-4f44-ff42-b446-91372517e38f"]
+},
+WindowSize->{958, 1001},
+WindowMargins->{{Automatic, 105.5}, {Automatic, 160.5}},
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1492b6ee-6e88-a04f-a5ab-91bac06eb868"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[1482, 35, 452, 9, 42, "Input",ExpressionUUID->"2117aabe-37fc-da4e-853a-8463ce42525f"],
+Cell[1937, 46, 333, 5, 31, "Output",ExpressionUUID->"c1b6b21c-4839-7243-863d-fb0a1d9c7e71"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2307, 56, 397, 8, 66, "Input",ExpressionUUID->"0b3db87f-7655-c34d-bcf5-eb12b8fb86af"],
+Cell[CellGroupData[{
+Cell[2729, 68, 4135, 102, 50, "Print",ExpressionUUID->"af390bac-1da5-1d42-afb7-9ef4595ac6c2"],
+Cell[6867, 172, 757, 13, 26, "Print",ExpressionUUID->"f6204dbc-5831-8543-988f-f9714020a0dd"],
+Cell[7627, 187, 806, 15, 26, "Print",ExpressionUUID->"3026eadd-03b4-1848-b676-7f40e7eec531"],
+Cell[8436, 204, 2408, 62, 26, "Print",ExpressionUUID->"8f455962-d7fc-2242-9c71-db25a9c1b434"],
+Cell[10847, 268, 696, 12, 26, "Print",ExpressionUUID->"cc1ee683-f955-464f-889f-829b44c0cee9"],
+Cell[11546, 282, 734, 13, 26, "Print",ExpressionUUID->"e1a3e8a1-d161-3e48-a2c6-30d4f423fe4c"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12329, 301, 552, 13, 47, "Input",ExpressionUUID->"be24d1c9-56b8-194b-8206-f9abc46f07a5"],
+Cell[CellGroupData[{
+Cell[12906, 318, 14303, 319, 296, "Print",ExpressionUUID->"5a239aa3-8420-7e4c-8d3f-637d70c398a6"],
+Cell[27212, 639, 10142, 226, 296, "Print",ExpressionUUID->"eaf70fc7-065f-ef4e-8542-abf5c508bf8a"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37403, 871, 1355, 32, 82, "Input",ExpressionUUID->"eeb83576-c267-cb4d-b9ef-a030fb24ec0b"],
+Cell[CellGroupData[{
+Cell[38783, 907, 44866, 1073, 296, "Print",ExpressionUUID->"4f64a49c-a277-5643-bf21-52c470314a30"],
+Cell[83652, 1982, 31000, 743, 296, "Print",ExpressionUUID->"3c7846c4-94af-c64c-a07c-c114fcf5fa6e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[114701, 2731, 10263, 283, 759, "Input",ExpressionUUID->"10fb1e97-fb65-4f4e-b42a-892df136fd58"],
+Cell[124967, 3016, 24566, 683, 355, "Output",ExpressionUUID->"8f9207a5-2d39-a44b-8017-b73f8d584b0c"]
+}, Open  ]],
+Cell[149548, 3702, 1242, 35, 113, "Input",ExpressionUUID->"e2036008-0f56-6f47-862d-f602a4975eee"],
+Cell[150793, 3739, 909, 25, 199, "Input",ExpressionUUID->"3617fa56-4f44-ff42-b446-91372517e38f"]
+}
+]
+*)
+
