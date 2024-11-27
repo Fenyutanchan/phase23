@@ -8,7 +8,8 @@ function generate_AMFlow_wolfram_script(
     family_name::String,
     den_collect::FeynmanDenominatorCollection,
     indices_list::Vector{Vector{Int}},
-    s, m
+    num_thread::Int,
+    s, m,
 )
     file_name_ext_list = (collect ∘ splitext)(file_name)
     file_name_ext_list[end] = ".wls"
@@ -42,7 +43,7 @@ function generate_AMFlow_wolfram_script(
     AMFlowInfo["Replacement"] = {pa^2 -> msqr, pb^2 -> msqr, (pa + pb)^2 -> s};
     AMFlowInfo["Propagator"] = {$(join(propagator_list, ", "))};
     AMFlowInfo["Numeric"] = {s -> $s, msqr -> $(m^2)};
-    AMFlowInfo["NThread"] = 16;
+    AMFlowInfo["NThread"] = $num_thread;
     AMFlowInfo["Prescription"] = {0, 0};
     AMFlowInfo["Cut"] = {1, 1, 1, 0, 0, 0, 0};
 
