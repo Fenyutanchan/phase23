@@ -42,7 +42,7 @@ function generate_AMFlow_wolfram_script(
     AMFlowInfo["Conservation"] = {};
     AMFlowInfo["Replacement"] = {pa^2 -> msqr, pb^2 -> msqr, (pa + pb)^2 -> s};
     AMFlowInfo["Propagator"] = {$(join(propagator_list, ", "))};
-    AMFlowInfo["Numeric"] = {s -> $s, msqr -> $(m^2)};
+    AMFlowInfo["Numeric"] = {s -> $s$(iszero(m) ? "" : ", msqr -> " * "$(m^2)")};
     AMFlowInfo["NThread"] = $num_thread;
     AMFlowInfo["Prescription"] = {0, 0};
     AMFlowInfo["Cut"] = {1, 1, 1, 0, 0, 0, 0};
@@ -58,6 +58,10 @@ function generate_AMFlow_wolfram_script(
     Exit[];
     
     """
+
+    if iszero(m)
+        script_content = replace(script_content, "msqr" => "0")
+    end
 
     write(file_name, script_content)
 end
