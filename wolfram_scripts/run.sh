@@ -9,6 +9,7 @@ wolframscript -f phase7.wls > phase7.log &
 wolframscript -f phase8.wls > phase8.log &
 wolframscript -f phase9.wls > phase9.log &
 wolframscript -f phase10.wls > phase10.log &
+wait
 wolframscript -f phase11.wls > phase11.log &
 wolframscript -f phase12.wls > phase12.log &
 wolframscript -f phase13.wls > phase13.log &
@@ -18,6 +19,7 @@ wolframscript -f phase16.wls > phase16.log &
 wolframscript -f phase17.wls > phase17.log &
 wolframscript -f phase18.wls > phase18.log &
 wolframscript -f phase19.wls > phase19.log &
+wait
 wolframscript -f phase20.wls > phase20.log &
 wolframscript -f phase21.wls > phase21.log &
 wolframscript -f phase22.wls > phase22.log &
@@ -27,6 +29,7 @@ wolframscript -f phase25.wls > phase25.log &
 wolframscript -f phase26.wls > phase26.log &
 wolframscript -f phase27.wls > phase27.log &
 wolframscript -f phase28.wls > phase28.log &
+wait
 wolframscript -f phase29.wls > phase29.log &
 wolframscript -f phase30.wls > phase30.log &
 wolframscript -f phase31.wls > phase31.log &
