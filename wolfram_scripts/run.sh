@@ -31,15 +31,3 @@ wolframscript -f phase30.wls
 wolframscript -f phase31.wls
 wolframscript -f phase32.wls
 wolframscript -f phase33.wls
-wolframscript -f phase34.wls
-wolframscript -f phase35.wls
-wolframscript -f phase36.wls
-wolframscript -f phase37.wls
-wolframscript -f phase38.wls
-wolframscript -f phase39.wls
-wolframscript -f phase40.wls
-wolframscript -f phase41.wls
-wolframscript -f phase42.wls
-wolframscript -f phase43.wls
-wolframscript -f phase44.wls
-wolframscript -f phase45.wls
