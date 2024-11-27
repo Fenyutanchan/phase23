@@ -21,7 +21,7 @@ AMFlowInfo["Prescription"] = {0, 0};
 AMFlowInfo["Cut"] = {1, 1, 1, 0, 0, 0, 0};
 
 
-integrals = {j[phase22, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1], j[phase22, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1], j[phase22, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1], j[phase22, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1], j[phase22, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], j[phase22, 1, 1, 1, 1, 1, 1, 0, 1, 2, 1], j[phase22, 1, 1, 1, 1, 1, 1, 0, 0, 0, 2], j[phase22, 1, 1, 1, 1, 1, 1, 0, 0, 1, 2], j[phase22, 1, 1, 1, 1, 1, 1, 0, 0, 2, 2]};
+integrals = {j[phase22, 1, 1, 1, 1, 0, 0, 1], j[phase22, 1, 1, 1, 1, 1, 0, 1], j[phase22, 1, 1, 1, 1, 0, 1, 1], j[phase22, 1, 1, 1, 0, 1, 1, 1], j[phase22, 1, 1, 1, 1, 1, 1, 1], j[phase22, 1, 1, 1, 0, 1, 2, 1], j[phase22, 1, 1, 1, 0, 0, 0, 2], j[phase22, 1, 1, 1, 0, 0, 1, 2], j[phase22, 1, 1, 1, 0, 0, 2, 2]};
 precision = 20;
 epsOrder = 4;
 sol = SolveIntegrals[integrals, precision, epsOrder];
