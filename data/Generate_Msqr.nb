@@ -4592,7 +4592,7 @@ Cell[BoxData[{
       RowBox[{"ii", ",", "1", ",", "12"}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"coeffcientList", "=", 
+  RowBox[{"coefficientList", "=", 
    RowBox[{"M23SqrList", "/", 
     RowBox[{"Table", "[", 
      RowBox[{
@@ -4632,7 +4632,7 @@ Cell[BoxData[{
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Export", "[", 
-   RowBox[{"\"\<coeffcientList.dat\>\"", ",", "coeffcientList"}], "]"}], 
+   RowBox[{"\"\<coefficientList.dat\>\"", ",", "coefficientList"}], "]"}], 
   ";"}]}], "Input",
  CellChangeTimes->{{3.941608891458809*^9, 3.9416089125683804`*^9}, {
   3.9416089652038784`*^9, 3.941609169752489*^9}, {3.941675534390728*^9, 
